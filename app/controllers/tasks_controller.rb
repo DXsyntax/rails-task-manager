@@ -5,6 +5,6 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id]) # so this params comes from rails and im extracting its id i got from the console
-    raise
+  # raise
   end
 end
