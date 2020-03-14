@@ -4,6 +4,9 @@
 
 <ol>
   <% @tasks.each do |task| %>
-   <li>   <input type="checkbox" id="task"> <%= task[:title] %>  </li>
+   <li>   <input type="checkbox" id="task"> <%= link_to "#{task[:title]}", tasks_path %> </li>
+
   <% end %>
 </ol>
+
+
