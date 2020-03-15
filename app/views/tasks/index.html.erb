@@ -4,9 +4,9 @@
 
 <ol>
   <% @tasks.each do |task| %>
-   <li>   <input type="checkbox" id="task"> <%= link_to "#{task[:title]}", tasks_path %> </li>
-
+   <li>   <input type="checkbox" id="task"> <%= link_to "#{task[:title]}", taskid_path(task[:id]) %> </li> <!-- not sure how i solved it but i made sure i used the prefix of show in my anchor url and linked it further to my task id in the params -->
   <% end %>
 </ol>
 
+<!-- FIGURE OUT HOW TO LINK IT TO THE SHOW PATH FOR ANCHOR URL -->
 
