@@ -12,8 +12,15 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params[:task])
-  #   # @task.save
+    @task = Task.new(task_params)
+    @task.save
+    redirect_to tasks_path(@task)
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :details)
   end
 end
 
