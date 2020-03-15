@@ -8,11 +8,13 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    @task = Task.new # this @task is linking to my 'new view file'
   end
-# might need a re direct to for a certain action
-  # def create
-  #   @task = Task.new(params[:task])
-  #   @task.save
-  # end
+
+  def create
+    @task = Task.new(params[:task])
+  #   # @task.save
+  end
 end
+
+# might need a re direct to for a certain action
