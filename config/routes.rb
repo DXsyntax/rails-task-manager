@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "tasks", to: "tasks#create", as: :taskcreate # this is for submitting the form , confirmation that association is for setting our prefixes, but still not understanding the logic behind it
   get "tasks/:id/edit", to: "tasks#edit", as: :taskedit # route for edit , get request
   get "tasks/:id", to: "tasks#show", as: :taskid# route for listing ONE specific task, althou i still have no idea how this works, my association allows me to name prefixes for routes
-  #route for update , patch request
+  patch "tasks/:id", to: "tasks#update", as: :taskupdate #route for update , patch request
 end
 
 
