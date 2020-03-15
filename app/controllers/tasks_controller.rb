@@ -18,6 +18,7 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id]) # no idea what this does, except maybe it finds the id# of my task?
   end
 
   private
