@@ -12,15 +12,18 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(task_params) # i don't understand strong params yet
     @task.save
-    redirect_to tasks_path(@task)
+    redirect_to tasks_path(@task) # not sure why this is to tasks path, maybe because when you submit the post request you want it to redirect to your tasks page so that's why?
+  end
+
+  def edit
   end
 
   private
 
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details) # don't understand this but know that it works
   end
 end
 
