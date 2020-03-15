@@ -1,15 +1,17 @@
 <h1>Please fill out a new task!</h1>
 
-<% form_for(@tasks) do |task| %>
+<%= form_for(@task) do |f| %>
   <div class="form-group">
-    <%= task.label :title %>
-    <%= task.text_field :title, class: 'form-control' %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= task.label :details %>
-    <%= task.text_field :details, class: 'form-control' %>
+    <%= f.label :details %>
+    <%= f.text_field :details, class: 'form-control' %>
   </div>
 
-  <%= task.submit class: 'btn btn-primary' %>
-<%end %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<!-- this @task is coming from my controller -->
